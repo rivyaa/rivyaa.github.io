@@ -1,0 +1,102 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #141b2d, #0b0e27);
+  overflow: hidden;
+}
+
+#text1 {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.ocean {
+  height: 10%; /* Adjust height as needed */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure stars are behind other content */
+}
+
+.star {
+  position: absolute;
+  width: 2px; /* Adjust star size */
+  height: 2px; /* Adjust star size */
+  background: white;
+  border-radius: 50%;
+  animation: twinkling 1s infinite alternate; /* Adjust duration of twinkling animation */
+}
+
+
+
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+.lua .textura {
+  background-image: url(https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgMoon.png);
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.8); /* White glow effect with decreasing radiance */
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+/* Animation for twinkling effect */
+@keyframes twinkling {
+  0% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+

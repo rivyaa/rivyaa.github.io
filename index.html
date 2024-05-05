@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Waves</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <audio controls id="music" hidden>
+    <source src="https://github.com/rivyaa/rivyaa.github.io/blob/main/song.mp3?raw=true" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p id="text1" style="color: papayawhip; font-size: 120%;"></p>
+  <div class="stars"></div>
+
+  <div class="lua">
+    <div class="textura" onclick="document.getElementById('music').play();">
+    </div>
+  </div>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <script src="index.js"></script>
+  <script src="letter.js"></script>
+</body>
+</html>
